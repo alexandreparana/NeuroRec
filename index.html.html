@@ -1,0 +1,1391 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head><script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "whqtc9bnvi");
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Neuro+Rec® — Recupere o Movimento das Suas Mãos</title>
+<meta name="description" content="A luva de reabilitação Neuro+Rec® usa neuroplasticidade para recuperar o movimento das mãos após AVC. Use 20 minutos por dia em casa. Garantia de 30 dias.">
+<meta property="og:title" content="Neuro+Rec® — Recupere o Movimento das Suas Mãos">
+<meta property="og:description" content="A luva de reabilitação que ativa a neuroplasticidade e ajuda seu cérebro a reconectar os movimentos. +3.000 pacientes. Garantia de 30 dias.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#1a56a0">
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '957728013787273');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=957728013787273&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg: #ffffff;
+  --bg-alt: #f2ede4;
+  --bg-dark: #1a56a0;
+  --text: #1c1714;
+  --text-muted: #5a5248;
+  --accent: oklch(60% 0.19 42);
+  --accent-hover: oklch(55% 0.19 42);
+  --teal: oklch(56% 0.09 185);
+  --serif: 'DM Serif Display', Georgia, serif;
+  --sans: 'DM Sans', sans-serif;
+  --radius: 12px;
+  --max: 760px;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--sans);
+  background: var(--bg);
+  color: var(--text);
+  font-size: 19px;
+  line-height: 1.75;
+  overflow-x: hidden;
+}
+
+/* REVEAL ANIMATIONS */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+.reveal-delay-5 { transition-delay: 0.5s; }
+
+/* ANNOUNCEMENT BAR */
+.announcement-bar {
+  background: #111;
+  color: #e8f0fb;
+  padding: 9px 0;
+  font-size: 13px;
+  font-weight: 500;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.announcement-track {
+  display: inline-flex;
+  gap: 0;
+  animation: ticker 18s linear infinite;
+}
+.announcement-track:hover { animation-play-state: paused; }
+.announcement-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 32px;
+}
+.announcement-item a { color: #e85d24; text-decoration: none; font-weight: 600; }
+.announcement-dot {
+  width: 4px; height: 4px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.3);
+  display: inline-block;
+}
+@keyframes ticker {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+@media (max-width: 480px) {
+  .announcement-bar { font-size: 12px; padding: 8px 0; }
+}
+
+/* NAV */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(28,23,20,0.08);
+  padding: 16px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-logo {
+  font-family: var(--serif);
+  font-size: 20px;
+  letter-spacing: -0.3px;
+  color: var(--text);
+}
+.nav-logo span { color: var(--accent); }
+.nav-cta {
+  background: var(--accent);
+  color: #fff;
+  padding: 10px 22px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  transition: background 0.2s, transform 0.15s;
+}
+.nav-cta:hover { background: var(--accent-hover); transform: translateY(-1px); }
+
+/* HERO */
+.hero {
+  min-height: 88vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 24px 60px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -120px; right: -120px;
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, #e8f0fb 0%, transparent 70%);
+  pointer-events: none;
+}
+.hero-eyebrow {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: #2563b8;
+  margin-bottom: 24px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.hero-eyebrow::before, .hero-eyebrow::after {
+  content: '';
+  width: 28px;
+  height: 1px;
+  background: #2563b8;
+  display: inline-block;
+}
+.hero h1 {
+  font-family: var(--serif);
+  font-size: clamp(34px, 5.5vw, 72px);
+  line-height: 1.1;
+  letter-spacing: -1.5px;
+  max-width: 780px;
+  margin-bottom: 28px;
+}
+.hero h1 em {
+  font-style: italic;
+  color: #133e7a;
+}
+.hero-sub {
+  font-size: 20px;
+  color: var(--text-muted);
+  max-width: 500px;
+  margin: 0 auto 40px;
+  font-weight: 400;
+  line-height: 1.6;
+}
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--accent);
+  color: #fff;
+  padding: 20px 40px;
+  border-radius: 50px;
+  font-size: 17px;
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: 0.3px;
+  transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+  box-shadow: 0 4px 20px oklch(60% 0.19 42 / 0.35);
+}
+.btn-primary:hover {
+  background: var(--accent-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px oklch(60% 0.19 42 / 0.4);
+}
+.btn-primary svg { flex-shrink: 0; }
+.hero-trust {
+  margin-top: 28px;
+  font-size: 13px;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.trust-dot {
+  width: 4px; height: 4px;
+  border-radius: 50%;
+  background: var(--text-muted);
+  opacity: 0.4;
+}
+.hero-img-wrap {
+  width: 100%;
+  max-width: 720px;
+  margin: 56px auto 0;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+}
+.hero-img-placeholder {
+  width: 100%;
+  aspect-ratio: 16/9;
+  background: repeating-linear-gradient(
+    45deg,
+    #e8e2d8 0px, #e8e2d8 1px,
+    #ede8e0 1px, #ede8e0 12px
+  );
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 12px;
+  color: #9e9088;
+  font-family: monospace;
+  font-size: 13px;
+}
+
+/* PAIN SECTION */
+.pain-section {
+  background: var(--bg-dark);
+  color: #f5f1ea;
+  padding: 100px 24px;
+}
+.section-inner { max-width: var(--max); margin: 0 auto; }
+.section-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #2563b8;
+  margin-bottom: 20px;
+}
+.pain-section .section-label {
+  color: #e8f0fb;
+}
+.pain-section h2 {
+  font-family: var(--serif);
+  font-size: clamp(30px, 4.5vw, 48px);
+  line-height: 1.15;
+  letter-spacing: -0.8px;
+  margin-bottom: 48px;
+  max-width: 520px;
+}
+.pain-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.pain-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--radius);
+  padding: 28px;
+  transition: background 0.2s;
+}
+.pain-card:hover { background: rgba(255,255,255,0.08); }
+.pain-icon {
+  width: 40px; height: 40px;
+  border-radius: 10px;
+  background: oklch(60% 0.19 42 / 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+.pain-card h3 {
+  font-family: var(--serif);
+  font-size: 18px;
+  margin-bottom: 8px;
+  font-weight: 400;
+}
+.pain-card p { font-size: 16px; color: rgba(245,241,234,0.75); line-height: 1.65; }
+
+/* SOLUTION */
+.solution-section {
+  padding: 100px 24px;
+  background: var(--bg);
+}
+.solution-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+.solution-visual {
+  border-radius: 20px;
+  overflow: hidden;
+}
+.solution-placeholder {
+  aspect-ratio: 4/5;
+  background: repeating-linear-gradient(
+    -45deg,
+    #e4ede9 0px, #e4ede9 1px,
+    #edf4f1 1px, #edf4f1 12px
+  );
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  color: #7a9e92;
+  font-family: monospace;
+  font-size: 12px;
+}
+.solution-text h2 {
+  font-family: var(--serif);
+  font-size: clamp(28px, 3.5vw, 42px);
+  line-height: 1.18;
+  letter-spacing: -0.6px;
+  margin-bottom: 20px;
+}
+.solution-text h2 em { font-style: italic; color: #2563b8; }
+.solution-text p { color: var(--text-muted); margin-bottom: 24px; font-size: 18px; }
+.stat-row {
+  display: flex;
+  gap: 32px;
+  margin-top: 32px;
+  padding-top: 32px;
+  border-top: 1px solid rgba(28,23,20,0.1);
+}
+.stat-item {}
+.stat-num {
+  font-family: var(--serif);
+  font-size: 34px;
+  color: #2563b8;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+.stat-label { font-size: 13px; color: var(--text-muted); }
+
+/* HOW IT WORKS */
+.how-section {
+  background: var(--bg-alt);
+  padding: 100px 24px;
+}
+.how-section h2 {
+  font-family: var(--serif);
+  font-size: clamp(28px, 4vw, 44px);
+  letter-spacing: -0.6px;
+  margin-bottom: 56px;
+  text-align: center;
+}
+.steps-container {
+  max-width: var(--max);
+  margin: 0 auto;
+}
+.step-item {
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  gap: 24px;
+  padding: 32px 0;
+  border-bottom: 1px solid rgba(28,23,20,0.08);
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+.step-item:last-child { border-bottom: none; }
+.step-num {
+  width: 52px; height: 52px;
+  border-radius: 50%;
+  background: rgba(28,23,20,0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--serif);
+  font-size: 20px;
+  color: var(--text-muted);
+  transition: background 0.3s, color 0.3s;
+  flex-shrink: 0;
+}
+.step-item.active .step-num {
+  background: #2563b8;
+  color: #fff;
+}
+.step-content h3 {
+  font-family: var(--serif);
+  font-size: 22px;
+  font-weight: 400;
+  margin-bottom: 0;
+  padding-top: 12px;
+  transition: color 0.2s;
+}
+.step-item.active .step-content h3 { color: #2563b8; }
+.step-desc {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.3s;
+  opacity: 0;
+  font-size: 17px;
+  color: var(--text-muted);
+}
+.step-item.active .step-desc {
+  max-height: 120px;
+  opacity: 1;
+  margin-top: 12px;
+}
+
+/* TESTIMONIALS */
+.testimonials-section {
+  padding: 100px 24px;
+  background: var(--bg);
+}
+.testimonials-section h2 {
+  font-family: var(--serif);
+  font-size: clamp(26px, 3.5vw, 40px);
+  letter-spacing: -0.5px;
+  margin-bottom: 48px;
+  text-align: center;
+}
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  max-width: var(--max);
+  margin: 0 auto;
+}
+.testimonial-card {
+  background: var(--bg-alt);
+  border-radius: var(--radius);
+  padding: 32px;
+  position: relative;
+}
+.testimonial-card::before {
+  content: '"';
+  font-family: var(--serif);
+  font-size: 80px;
+  color: #2563b8;
+  opacity: 0.2;
+  position: absolute;
+  top: 16px; left: 24px;
+  line-height: 1;
+}
+.testimonial-text {
+  font-size: 18px;
+  line-height: 1.65;
+  margin-bottom: 20px;
+  color: var(--text);
+}
+.testimonial-author {
+  font-size: 13px;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+.stars {
+  color: #2563b8;
+  font-size: 14px;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+.testimonial-card.featured {
+  background: var(--bg-dark);
+  color: #f5f1ea;
+  grid-column: 1 / -1;
+}
+.testimonial-card.featured .testimonial-text { color: #f5f1ea; font-size: 18px; }
+.testimonial-card.featured .testimonial-author { color: rgba(245,241,234,0.55); }
+
+/* OFFER */
+.offer-section {
+  background: var(--bg-alt);
+  padding: 100px 24px;
+}
+.offer-box {
+  max-width: 580px;
+  margin: 0 auto;
+  text-align: center;
+}
+.offer-tag {
+  display: inline-block;
+  background: #dbeafe;
+  color: #2563b8;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 6px 16px;
+  border-radius: 50px;
+  margin-bottom: 24px;
+  border: none;
+}
+.offer-box h2 {
+  font-family: var(--serif);
+  font-size: clamp(26px, 4vw, 38px);
+  margin-bottom: 36px;
+  letter-spacing: -0.4px;
+  line-height: 1.2;
+  color: var(--text);
+}
+.offer-price-block {
+  background: #111;
+  border: none;
+  border-radius: 20px;
+  padding: 36px 32px;
+  margin-bottom: 28px;
+}
+.price-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 4px;
+}
+.price-old {
+  font-size: 20px;
+  font-size: 22px;
+  color: rgba(255,255,255,0.35);
+  text-decoration: line-through;
+}
+.price-new {
+  font-family: var(--serif);
+  font-size: clamp(52px, 10vw, 76px);
+  line-height: 1;
+  color: #fff;
+  letter-spacing: -2px;
+}
+.price-installment {
+  font-size: 19px;
+  color: rgba(255,255,255,0.65);
+  margin: 10px 0 0;
+}
+.price-installment strong { color: #fff; }
+.offer-divider {
+  width: 40px; height: 1px;
+  background: rgba(255,255,255,0.15);
+  margin: 24px auto;
+}
+.offer-perks {
+  list-style: none;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 28px;
+}
+.offer-perks li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 17px;
+  color: rgba(255,255,255,0.9);
+}
+.perk-check {
+  width: 22px; height: 22px;
+  border-radius: 50%;
+  background: #22c55e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #fff;
+}
+.offer-urgency {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.urgency-dot {
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: #4ade80;
+  flex-shrink: 0;
+  animation: pulse-dot 1.8s ease-in-out infinite;
+}
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.7); }
+}
+.guarantee {
+  margin-top: 16px;
+  font-size: 13px;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.offer-trust-row {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 28px;
+  flex-wrap: wrap;
+}
+.offer-trust-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+/* FAQ */
+.faq-section {
+  padding: 100px 24px;
+  background: var(--bg);
+}
+.faq-section h2 {
+  font-family: var(--serif);
+  font-size: clamp(26px, 3.5vw, 40px);
+  letter-spacing: -0.5px;
+  margin-bottom: 48px;
+  text-align: center;
+}
+.faq-list { max-width: var(--max); margin: 0 auto; }
+.faq-item {
+  border-bottom: 1px solid rgba(28,23,20,0.1);
+}
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  text-align: left;
+  padding: 24px 0;
+  font-family: var(--sans);
+  font-size: 19px;
+  font-weight: 500;
+  color: var(--text);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  transition: color 0.2s;
+}
+.faq-question:hover { color: #2563b8; }
+.faq-question.open { color: #2563b8; }
+.faq-chevron {
+  flex-shrink: 0;
+  width: 20px; height: 20px;
+  transition: transform 0.3s;
+  color: var(--text-muted);
+}
+.faq-question.open .faq-chevron { transform: rotate(180deg); }
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+.faq-answer.open { max-height: 200px; }
+.faq-answer p {
+  padding-bottom: 24px;
+  color: var(--text-muted);
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+/* FINAL CTA */
+.final-cta {
+  background: var(--bg-dark);
+  padding: 120px 24px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.final-cta::before {
+  content: '';
+  position: absolute;
+  bottom: -200px; left: 50%;
+  transform: translateX(-50%);
+  width: 700px; height: 400px;
+  background: radial-gradient(circle, oklch(60% 0.19 42 / 0.15) 0%, transparent 70%);
+  pointer-events: none;
+}
+.final-cta h2 {
+  font-family: var(--serif);
+  font-size: clamp(32px, 5vw, 58px);
+  letter-spacing: -1px;
+  color: #f5f1ea;
+  margin-bottom: 16px;
+  line-height: 1.1;
+}
+.final-cta h2 em { font-style: italic; color: #fafaf7; }
+.final-cta p {
+  color: rgba(245,241,234,0.55);
+  max-width: 420px;
+  margin: 0 auto 40px;
+  font-size: 16px;
+}
+
+/* TRUST BADGES */
+.trust-badges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 28px;
+}
+.trust-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #fff;
+  border: 1px solid #dbeafe;
+  border-radius: 50px;
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #1a56a0;
+  box-shadow: 0 1px 4px rgba(28,23,20,0.06);
+}
+.trust-badge svg { flex-shrink: 0; }
+.trust-badges-dark .trust-badge {
+  background: rgba(255,255,255,0.1);
+  border-color: rgba(255,255,255,0.2);
+  color: #e8f0fb;
+}
+
+/* FOOTER */
+.footer {
+  background: var(--bg-dark);
+  border-top: 1px solid rgba(255,255,255,0.05);
+  padding: 32px 24px;
+  text-align: center;
+  font-size: 12px;
+  color: rgba(245,241,234,0.3);
+}
+
+/* RESPONSIVE */
+@media (max-width: 640px) {
+  .btn-primary { font-size: 14px; padding: 16px 24px; }
+  .pain-grid
+  .solution-grid { grid-template-columns: 1fr; }
+  .testimonials-grid { grid-template-columns: 1fr; }
+  .testimonial-card.featured { grid-column: 1; }
+  .offer-box { padding: 36px 24px; }
+  .nav { padding: 14px 20px; }
+  .nav-logo { font-size: 17px; }
+  .stat-row { gap: 20px; }
+  .pain-section,
+  .solution-section,
+  .how-section,
+  .testimonials-section,
+  .offer-section,
+  .faq-section,
+  .final-cta { padding: 28px 20px; }
+  .hero { padding: 16px 20px 28px; }
+}
+</style>
+</head>
+<body>
+
+<div id="root"></div>
+
+<script type="text/babel" src="tweaks-panel.jsx"></script>
+<script type="text/babel">
+const { useState, useEffect, useRef } = React;
+
+const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
+  "accentColor": "#d9571e",
+  "headlineSize": 64,
+  "ctaText": "QUERO RECUPERAR MEU MOVIMENTO",
+  "showSocialProof": true,
+  "darkHero": false
+}/*EDITMODE-END*/;
+
+// ── Scroll reveal hook ──────────────────────────────────
+function useReveal() {
+  useEffect(() => {
+    const els = document.querySelectorAll('.reveal');
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.12 });
+    els.forEach(el => obs.observe(el));
+    return () => obs.disconnect();
+  }, []);
+}
+
+// ── Icon components ─────────────────────────────────────
+const ArrowRight = () => (
+  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+    <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
+  </svg>
+);
+const Check = () => (
+  <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+    <path d="M2 6l3 3 5-5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
+  </svg>
+);
+const Shield = () => (
+  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+    <path d="M8 1.5L2.5 4v4c0 3 2.5 5.5 5.5 6.5 3-1 5.5-3.5 5.5-6.5V4L8 1.5z" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"/>
+    <path d="M5.5 8l1.5 1.5 3-3" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"/>
+  </svg>
+);
+const ChevronDown = ({ className }) => (
+  <svg className={className} viewBox="0 0 20 20" fill="none">
+    <path d="M5 7.5l5 5 5-5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
+  </svg>
+);
+
+const HERO_VIDEO_URL = "hero.mp4";
+
+function HeroVideo() {
+  return (
+    <video
+      src={HERO_VIDEO_URL}
+      autoPlay muted loop playsInline
+      style={{width:'100%', borderRadius:'16px', display:'block'}}
+    />
+  );
+}
+function AnnouncementBar() {
+  const items = [
+    { key: 'a1', text: <span className="announcement-item">🔒 Compra 100% segura</span> },
+    { key: 'a2', text: <span className="announcement-item">✈️ <a href="#oferta">Frete grátis</a> para todo o Brasil</span> },
+    { key: 'a3', text: <span className="announcement-item">↩️ Garantia de 30 dias</span> },
+  ];
+  return (
+    <div className="announcement-bar">
+      <div className="announcement-track">
+        {items.map(i => <React.Fragment key={i.key}>{i.text}</React.Fragment>)}
+        {items.map(i => <React.Fragment key={i.key + '_2'}>{i.text}</React.Fragment>)}
+      </div>
+    </div>
+  );
+}
+function Nav({ ctaText }) {
+  const [scrolled, setScrolled] = useState(false);
+  useEffect(() => {
+    const h = () => setScrolled(window.scrollY > 40);
+    window.addEventListener('scroll', h);
+    return () => window.removeEventListener('scroll', h);
+  }, []);
+  return (
+    <nav className="nav" style={{ boxShadow: scrolled ? '0 2px 20px rgba(28,23,20,0.08)' : 'none' }}>
+      <img src="logo.png" alt="Neuro+Rec®" style={{height:'44px', width:'auto', display:'block'}} />
+      <a href="#oferta" className="nav-cta">Comprar agora</a>
+    </nav>
+  );
+}
+
+// ── Hero ─────────────────────────────────────────────────
+function Hero({ tweaks }) {
+  return (
+    <section className="hero section" id="hero">
+      <div className="reveal">
+        <div className="hero-eyebrow">Reabilitação com neuroplasticidade</div>
+      </div>
+      <h1 className="reveal reveal-delay-1" style={{ fontSize: tweaks.headlineSize > 0 ? `clamp(38px, 6vw, ${tweaks.headlineSize}px)` : undefined }}>
+        Volte a mover sua <em>mão</em><br/>mesmo após um AVC
+      </h1>
+      <p className="hero-sub reveal reveal-delay-2">
+        Exercícios automáticos que ativam a neuroplasticidade e ajudam seu cérebro a reconectar os movimentos em casa.
+      </p>
+      <div className="reveal reveal-delay-3">
+        <a href="#oferta" className="btn-primary">
+          {tweaks.ctaText} <ArrowRight />
+        </a>
+      </div>
+      {tweaks.showSocialProof && (
+        <div className="hero-trust reveal reveal-delay-4">
+          <span>+3.000 pacientes em reabilitação</span>
+          <span className="trust-dot"></span>
+          <span>Uso domiciliar</span>
+          <span className="trust-dot"></span>
+          <span>Garantia de 30 dias</span>
+        </div>
+      )}
+
+      <div className="hero-img-wrap reveal reveal-delay-5">
+        <HeroVideo />
+        <p style={{textAlign:'center', fontSize:'13px', color:'var(--text-muted)', marginTop:'12px'}}>
+          Movimento automático que auxilia na recuperação da mão
+        </p>
+      </div>
+    </section>
+  );
+}
+
+// ── Pain ─────────────────────────────────────────────────
+const pains = [
+  { title: 'Dificuldade em tarefas simples', desc: 'Segurar um copo, abrir uma porta, escrever — ações que antes eram automáticas.' },
+  { title: 'Dependência constante', desc: 'Precisar de ajuda para o que sempre fez sozinho afeta a autoestima e a liberdade.' },
+  { title: 'Fisioterapia lenta demais', desc: 'Sessões espaçadas não são suficientes para manter a ativação neural diária.' },
+  { title: 'Medo de não recuperar', desc: 'A incerteza sobre o futuro pesa mais do que a limitação física em si.' },
+];
+const PainIcon = ({ i }) => {
+  const icons = [
+    <path d="M8 14s0-6 6-6 6 6 6 6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>,
+    <path d="M7 12h10M12 7v10" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>,
+    <path d="M8 8h8v10H8z M11 8V6a1 1 0 012 0v2" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>,
+    <path d="M12 6v6l4 2" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>,
+  ];
+  return (
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+      {icons[i] || null}
+    </svg>
+  );
+};
+
+function PainSection() {
+  return (
+    <section className="pain-section">
+      <div className="section-inner">
+        <p className="section-label reveal">A realidade de quem perdeu o movimento</p>
+        <h2 className="reveal reveal-delay-1">Perder o movimento da mão muda tudo</h2>
+        <div className="pain-grid">
+          {pains.map((p, i) => (
+            <div key={i} className={`pain-card reveal reveal-delay-${i + 1}`}>
+              <div className="pain-icon"><PainIcon i={i} /></div>
+              <h3>{p.title}</h3>
+              <p>{p.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+// ── Solution ─────────────────────────────────────────────
+function SolutionSection() {
+  return (
+    <section className="solution-section">
+      <div className="section-inner">
+        <div className="solution-grid">
+          <div className="solution-visual reveal">
+            <img src="solution.png" alt="Neuro+Rec® em uso" style={{width:'100%', borderRadius:'20px', display:'block', objectFit:'cover'}} />
+          </div>
+          <div className="solution-text">
+            <p className="section-label reveal">A ciência por trás</p>
+            <h2 className="reveal reveal-delay-1">O cérebro pode <em>reaprender</em>, com o estímulo certo</h2>
+            <p className="reveal reveal-delay-2">
+              A neuroplasticidade é a capacidade do cérebro de criar novas conexões. A Neuro+Rec® usa movimentos repetitivos assistidos para ativar exatamente esse processo.
+            </p>
+            <p className="reveal reveal-delay-3" style={{color:'var(--text-muted)', fontSize:'15px'}}>
+              Com apenas 20 minutos por dia, você mantém os circuitos neurais ativos e acelera a recuperação funcional, sem precisar sair de casa.
+            </p>
+            <div className="stat-row reveal reveal-delay-4">
+              <div className="stat-item">
+                <div className="stat-num">20min</div>
+                <div className="stat-label">por dia são suficientes</div>
+              </div>
+              <div className="stat-item">
+                <div className="stat-num">+3k</div>
+                <div className="stat-label">pacientes em uso</div>
+              </div>
+              <div className="stat-item">
+                <div className="stat-num">30d</div>
+                <div className="stat-label">de garantia total</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+// ── For whom ─────────────────────────────────────────────
+const conditions = [
+  { label: 'Pós-AVC', desc: 'Recuperação neuromotora após acidente vascular cerebral isquêmico ou hemorrágico.' },
+  { label: 'Hemiplegia', desc: 'Estimulação passiva para membros com mobilidade reduzida ou ausente.' },
+  { label: 'Túnel do carpo', desc: 'Movimentos suaves que aliviam a compressão e reativam a musculatura.' },
+  { label: 'Artrose', desc: 'Manutenção da amplitude de movimento e redução da rigidez articular.' },
+];
+
+function ForWhomSection() {
+  return (
+    <section className="how-section" style={{background:'var(--bg)'}}>
+      <div className="section-inner">
+        <p className="section-label reveal" style={{textAlign:'center'}}>Indicações</p>
+        <h2 className="reveal reveal-delay-1" style={{textAlign:'center', fontFamily:'var(--serif)', fontSize:'clamp(26px,3.5vw,40px)', letterSpacing:'-0.5px', marginBottom:'48px'}}>
+          Para quem é a Neuro+Rec®?
+        </h2>
+        <div style={{display:'grid', gridTemplateColumns:'repeat(auto-fit, minmax(220px, 1fr))', gap:'16px', maxWidth:'var(--max)', margin:'0 auto'}}>
+          {conditions.map((c, i) => (
+            <div key={i} className={`reveal reveal-delay-${i+1}`} style={{
+              background:'var(--bg-alt)',
+              borderRadius:'var(--radius)',
+              padding:'28px 24px',
+              borderTop:'3px solid #2563b8',
+            }}>
+              <div style={{fontFamily:'var(--serif)', fontSize:'20px', marginBottom:'10px'}}>{c.label}</div>
+              <p style={{fontSize:'14px', color:'var(--text-muted)', lineHeight:'1.6', margin:0}}>{c.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+// ── How it works ─────────────────────────────────────────
+const steps = [
+  { title: 'Coloque a luva', desc: 'Design ergonômico que se adapta a diferentes tamanhos de mão. Encaixe simples, sem necessidade de ajuda.' },
+  { title: 'Ative o modo automático', desc: 'Um botão liga o ciclo de movimentos passivos. O dispositivo guia seus dedos em sequências programadas para estimular os nervos.' },
+  { title: 'Use diariamente por 20 minutos', desc: 'A consistência é o que gera resultado. O protocolo diário mantém os sinais neurais ativos e progressivamente mais fortes.' },
+  { title: 'Acompanhe sua evolução', desc: 'Com o tempo, movimentos que antes eram assistidos passam a ser espontâneos — o sinal de que os circuitos estão se reconectando.' },
+];
+
+function HowSection() {
+  const [active, setActive] = useState(0);
+  return (
+    <section className="how-section">
+      <div className="section-inner">
+        <p className="section-label reveal" style={{textAlign:'center'}}>Simples de usar</p>
+        <h2 className="reveal reveal-delay-1">Como funciona</h2>
+        <div className="steps-container">
+          {steps.map((s, i) => (
+            <div
+              key={i}
+              className={`step-item reveal reveal-delay-${i + 1}${active === i ? ' active' : ''}`}
+              onClick={() => setActive(i)}
+            >
+              <div className="step-num">{i + 1}</div>
+              <div className="step-content">
+                <h3>{s.title}</h3>
+                <div className="step-desc"><p>{s.desc}</p></div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+// ── Testimonials ─────────────────────────────────────────
+const testimonialData = [
+  { img: 'jose.avif', name: 'José, 58 anos', text: 'Senti melhora na mobilidade já nas primeiras semanas.' },
+  { img: 'ana.avif', name: 'Ana, 45 anos', text: 'Hoje consigo fazer tarefas simples que antes não conseguia.' },
+  { img: 'geraldo.png', name: 'Sr. Geraldo, 71 anos', text: 'Mais autonomia e confiança no dia a dia. Depois do AVC, comecei a ver movimento novamente na minha mão.' },
+];
+
+function TestimonialImg({ src, name }) {
+  const [err, setErr] = React.useState(false);
+  if (err) return (
+    <div style={{width:52,height:52,borderRadius:'50%',background:'var(--bg-alt)',display:'flex',alignItems:'center',justifyContent:'center',flexShrink:0,border:'1px solid rgba(28,23,20,0.1)'}}>
+      <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+        <circle cx="11" cy="8" r="4" stroke="currentColor" strokeWidth="1.4" opacity="0.4"/>
+        <path d="M3 20c0-4 3.6-7 8-7s8 3 8 7" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" opacity="0.4"/>
+      </svg>
+    </div>
+  );
+  return <img src={src} alt={name} onError={() => setErr(true)} style={{width:52,height:52,borderRadius:'50%',objectFit:'cover',flexShrink:0,border:'2px solid var(--bg-alt)'}} />;
+}
+
+function TestimonialsSection() {
+  return (
+    <section className="testimonials-section">
+      <div className="section-inner">
+        <p className="section-label reveal" style={{textAlign:'center'}}>Depoimentos reais</p>
+        <h2 className="reveal reveal-delay-1">Resultados que mudam vidas</h2>
+        <div className="testimonials-grid">
+          {testimonialData.map((t, i) => (
+            <div key={i} className={`testimonial-card${t.featured ? ' featured' : ''} reveal reveal-delay-${i}`}>
+              <div className="stars">★★★★★</div>
+              <p className="testimonial-text">"{t.text}"</p>
+              <div style={{display:'flex', alignItems:'center', gap:'12px', marginTop:'16px'}}>
+                <TestimonialImg src={t.img} name={t.name} />
+                <div className="testimonial-author">{t.name}</div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function GuiaTamanhos() {
+  const [open, setOpen] = React.useState(false);
+  return (
+    <div style={{marginBottom:'12px'}}>
+      <button
+        onClick={() => setOpen(!open)}
+        style={{
+          background:'none', border:'none', cursor:'pointer',
+          color:'rgba(255,255,255,0.75)', fontSize:'16px',
+          display:'flex', alignItems:'center', gap:'6px',
+          padding:'0 0 10px', fontFamily:'var(--sans)',
+          textDecoration:'underline', textUnderlineOffset:'3px',
+        }}
+      >
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+          <circle cx="8" cy="8" r="6" stroke="currentColor" strokeWidth="1.4"/>
+          <path d="M8 7v4M8 5.5v.5" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round"/>
+        </svg>
+        {open ? 'Fechar guia de tamanhos' : 'Ver guia de tamanhos'}
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" style={{transform: open ? 'rotate(180deg)' : 'none', transition:'transform 0.3s'}}>
+          <path d="M2 4l4 4 4-4" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+      </button>
+      {open && (
+        <div style={{borderRadius:'12px', overflow:'hidden', marginBottom:'12px'}}>
+          <img src="guia-tamanhos.png" alt="Guia de tamanhos Neuro+Rec" style={{width:'100%', display:'block', borderRadius:'12px'}} />
+        </div>
+      )}
+    </div>
+  );
+}
+
+// ── Offer ─────────────────────────────────────────────────
+const CHECKOUT_URLS = {
+  direita: {
+    P:  'https://neurorec.pay.yampi.com.br/r/1A2ODW0E61',
+    M:  'https://neurorec.pay.yampi.com.br/r/CUTY279EQF',
+    G:  'https://neurorec.pay.yampi.com.br/r/3KCJ1K3WGT',
+    GG: 'https://neurorec.pay.yampi.com.br/r/Q70SB68MRX',
+  },
+  esquerda: {
+    P:  'https://neurorec.pay.yampi.com.br/r/5ZTF1ON0DV',
+    M:  'https://neurorec.pay.yampi.com.br/r/PG9NI2DPJ6',
+    G:  'https://neurorec.pay.yampi.com.br/r/7VNT8SH9LV',
+    GG: 'https://neurorec.pay.yampi.com.br/r/NPBWJMXZJ6',
+  },
+};
+
+function OfferSection({ ctaText }) {
+  const [mao, setMao] = React.useState(null);
+  const [tamanho, setTamanho] = React.useState(null);
+  const url = mao && tamanho ? CHECKOUT_URLS[mao][tamanho] : null;
+
+  const btnBase = {
+    border: '2px solid rgba(255,255,255,0.3)',
+    borderRadius: '10px',
+    background: 'rgba(255,255,255,0.08)',
+    color: '#fff',
+    fontSize: '16px',
+    fontWeight: '600',
+    padding: '14px 0',
+    cursor: 'pointer',
+    transition: 'all 0.15s',
+    fontFamily: 'var(--sans)',
+  };
+  const btnActive = {
+    ...btnBase,
+    background: 'var(--accent)',
+    borderColor: 'var(--accent)',
+  };
+
+  return (
+    <section className="offer-section" id="oferta">
+      <div className="offer-box reveal">
+        <div className="offer-tag">Oferta especial</div>
+        <h2>Recupere sua independência<br/>com a Neuro+Rec®</h2>
+
+        <div className="offer-price-block">
+          <div style={{textAlign:'center', marginBottom:'4px'}}>
+            <span className="price-old" style={{display:'block', marginBottom:'4px'}}>de R$ 897</span>
+            <span className="price-new">R$&nbsp;597</span>
+          </div>
+          <p className="price-installment">ou <strong>10× de R$ 74,57</strong> sem juros</p>
+          <div className="offer-divider"></div>
+          <ul className="offer-perks">
+            {[
+              'Luva Neuro+Rec® com modo automático',
+              'Guia de uso e protocolo diário',
+              'Suporte por WhatsApp',
+              'Frete Grátis para todo o Brasil',
+            ].map((p, i) => (
+              <li key={i}>
+                <span className="perk-check"><Check /></span>
+                {p}
+              </li>
+            ))}
+          </ul>
+          <div className="offer-divider"></div>
+
+          {/* Seletor de mão */}
+          <p style={{color:'#fff', fontSize:'15px', fontWeight:'600', letterSpacing:'2px', textTransform:'uppercase', marginBottom:'12px', textAlign:'left'}}>
+            Qual mão quer reabilitar?
+          </p>
+          <div style={{display:'grid', gridTemplateColumns:'1fr 1fr', gap:'10px', marginBottom:'20px'}}>
+            {['direita','esquerda'].map(m => (
+              <button key={m} style={mao === m ? btnActive : btnBase} onClick={() => setMao(m)}>
+                {m === 'direita' ? 'Mão Direita' : 'Mão Esquerda'}
+              </button>
+            ))}
+          </div>
+
+          {/* Seletor de tamanho */}
+          <p style={{color:'#fff', fontSize:'13px', fontWeight:'600', letterSpacing:'2px', textTransform:'uppercase', marginBottom:'12px', textAlign:'left'}}>
+            Tamanho
+          </p>
+          <GuiaTamanhos />
+          <div style={{display:'grid', gridTemplateColumns:'repeat(4,1fr)', gap:'10px', marginBottom:'8px'}}>
+            {['P','M','G','GG'].map(t => (
+              <button key={t} style={tamanho === t ? btnActive : btnBase} onClick={() => setTamanho(t)}>
+                {t}
+              </button>
+            ))}
+          </div>
+          {!mao || !tamanho ? (
+            <p style={{fontSize:'16px', color:'#fff', marginTop:'8px', textAlign:'center'}}>
+              Selecione a mão e o tamanho para continuar
+            </p>
+          ) : null}
+          <div className="offer-divider"></div>
+
+          <div className="offer-urgency" style={{color:'rgba(255,255,255,0.7)'}}>
+            <span className="urgency-dot"></span>
+            Estoque disponível — desconto válido hoje
+          </div>
+
+          <a
+            href={url || '#oferta'}
+            onClick={!url ? e => e.preventDefault() : undefined}
+            className="btn-primary"
+            style={{width:'100%', justifyContent:'center', fontSize:'15px', padding:'20px 36px'}}
+          >
+            {ctaText} <ArrowRight />
+          </a>
+
+        <p className="guarantee" style={{color:'rgba(255,255,255,0.6)', marginTop:'20px', fontSize:'17px'}}>
+            <Shield /> Garantia de 30 dias ou seu dinheiro de volta
+          </p>
+
+          <div className="offer-trust-row" style={{marginTop:'20px'}}>
+            {['Pagamento seguro', 'Produto certificado', 'Frete grátis'].map((t, i) => (
+              <span key={i} className="offer-trust-item" style={{color:'rgba(255,255,255,0.6)', fontSize:'17px'}}>
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M5 8l2 2 4-4" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                {t}
+              </span>
+            ))}
+          </div>
+
+        </div>
+      </div>
+    </section>
+  );
+}
+
+// ── FAQ ───────────────────────────────────────────────────
+const faqs = [
+  { q: 'A Neuro+Rec® realmente funciona?', a: 'Sim. O dispositivo é baseado em estimulação passiva repetitiva, um protocolo amplamente estudado para reabilitação neuromotora. A neuroplasticidade é ativada pela repetição consistente dos movimentos.' },
+  { q: 'Preciso de ajuda para usar?', a: 'Não. O design foi pensado para uso independente. Basta encaixar a luva e pressionar um botão. O modo automático faz todo o trabalho.' },
+  { q: 'Em quanto tempo verei resultados?', a: 'Os resultados variam conforme o grau de comprometimento e a regularidade de uso. Muitos usuários relatam perceber diferença nas primeiras 2 a 4 semanas de uso diário.' },
+  { q: 'Funciona para qualquer tipo de AVC?', a: 'A Neuro+Rec® é indicada para reabilitação de membros superiores após AVC isquêmico ou hemorrágico, com comprometimento motor leve a moderado. Em caso de dúvida, consulte seu médico ou fisioterapeuta.' },
+  { q: 'E se eu não ficar satisfeito?', a: 'Você tem 30 dias para testar. Se não estiver satisfeito por qualquer motivo, devolvemos 100% do valor pago, sem perguntas.' },
+];
+
+function FAQSection() {
+  const [open, setOpen] = useState(null);
+  return (
+    <section className="faq-section">
+      <div className="section-inner">
+        <p className="section-label reveal" style={{textAlign:'center'}}>Dúvidas frequentes</p>
+        <h2 className="reveal reveal-delay-1">Perguntas e respostas</h2>
+        <div className="faq-list">
+          {faqs.map((f, i) => (
+            <div key={i} className={`faq-item reveal reveal-delay-${i}`}>
+              <button
+                className={`faq-question${open === i ? ' open' : ''}`}
+                onClick={() => setOpen(open === i ? null : i)}
+              >
+                {f.q}
+                <ChevronDown className="faq-chevron" />
+              </button>
+              <div className={`faq-answer${open === i ? ' open' : ''}`}>
+                <p>{f.a}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+// ── Final CTA ─────────────────────────────────────────────
+function FinalCTA({ ctaText }) {
+  return (
+    <section className="final-cta">
+      <h2 className="reveal">Sua recuperação<br/><em>começa hoje</em></h2>
+      <p className="reveal reveal-delay-1">Não espere mais para recuperar sua independência e qualidade de vida.</p>
+      <div className="reveal reveal-delay-2">
+        <a href="#oferta" className="btn-primary">
+          QUERO COMEÇAR AGORA <ArrowRight />
+        </a>
+      </div>
+    </section>
+  );
+}
+
+// ── Footer ────────────────────────────────────────────────
+function Footer() {
+  return (
+    <footer className="footer">
+      © 2026 Neuro+Rec®. Todos os direitos reservados. · Este produto não substitui orientação médica ou fisioterapêutica.
+    </footer>
+  );
+}
+
+// ── App ───────────────────────────────────────────────────
+function App() {
+  const [t, setTweak] = useTweaks(TWEAK_DEFAULTS);
+  useReveal();
+
+  useEffect(() => {
+    const root = document.documentElement;
+    root.style.setProperty('--accent', t.accentColor);
+    root.style.setProperty('--accent-hover', t.accentColor + 'cc');
+  }, [t.accentColor]);
+
+  return (
+    <>
+      <AnnouncementBar />
+      <Nav ctaText={t.ctaText} />
+      <Hero tweaks={t} />
+      <PainSection />
+      <SolutionSection />
+      <ForWhomSection />
+      <HowSection />
+      <TestimonialsSection />
+      <OfferSection ctaText={t.ctaText} />
+      <FAQSection />
+      <FinalCTA ctaText={t.ctaText} />
+      <Footer />
+      <TweaksPanel>
+        <TweakSection label="Marca" />
+        <TweakColor label="Cor de destaque" value={t.accentColor} onChange={v => setTweak('accentColor', v)} />
+        <TweakSection label="Hero" />
+        <TweakSlider label="Tamanho do título" value={t.headlineSize} min={44} max={90} step={2} unit="px" onChange={v => setTweak('headlineSize', v)} />
+        <TweakToggle label="Mostrar prova social" value={t.showSocialProof} onChange={v => setTweak('showSocialProof', v)} />
+        <TweakSection label="Copywriting" />
+        <TweakText label="Texto do CTA" value={t.ctaText} onChange={v => setTweak('ctaText', v)} />
+      </TweaksPanel>
+    </>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+</script>
+</body>
+</html>
